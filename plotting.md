@@ -1,24 +1,30 @@
 # A quickstart guide to CLI plotting on a Mac (Using Terminal)
 
-This is a rough draft for plotting via Terminal on a Mac. If you run into any issues, please message me directly so I can clarify the instructions. This assumes no experience using Terminal.
+This is a rough draft for plotting via Terminal on a Mac. If you run into any issues, please reach out out to me so I can hopefully clarify the guide. This assumes no experience using Terminal.
 
-1. Install the Chia app and run it (this will create your wallet, private keys, etc.)
-2. Let's open Terminal and update the shell to use `bash` (for simplicity)
-    * Open Preferences (Terminal -> Preferences, or use the keyboard shortcut `⌘ + ,`)
-    * Under `General`, select `Command (complete path):` and update the value to `/bin/bash` 
+## Install Chia
+1. If you haven't already, install the Chia app and run it (this will create your wallet, private keys, etc.)
+
+## Update Terminal to use the `bash` shell
+
+Terminal provides multiple `shell` environments. Newer Macs, by default, load the `zsh` shell. For the sake of simplicity, we're going to use `bash`. However, if you feel comfortable with another shell, you may skip this step all together!)
+
+1. Open Terminal
+2. Open Preferences (Terminal -> Preferences, or use the keyboard shortcut `⌘ + ,`)
+3. Under `General`, select `Command (complete path):` and update the value to `/bin/bash` 
 
 Your preferences should look like:
 
 ![System Preferences](resources/plotting/system-preferences.png)
 
-4. Close Preferences.
-5. If a Terminal window is open, close it.
-5. Open a new Terminal window (`Shell -> New Window -> New Window With Profile` or `⌘ + n`)
-6. Type `echo $0`. This should return `-bash`. If it returns `sh` or `zsh`, check your Terminal Preferences above.
+4. Close Preferences window (note: there is no "explicit" save, just modify the value and close)
+5. If an existing Terminal window is open, close that! This is required to load the `bash` shell
+6. Open a new Terminal window (`Shell -> New Window -> New Window With Profile` or `⌘ + n`)
+7. Type `echo $0`. This should return `-bash`. If it returns `sh` or `zsh`, check your Terminal Preferences above.
 
 ## Adding Chia to `$PATH`
 
-1. Copy and paste the following: `echo export PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH >> ~/.bash_profile`, and then hit Enter.
+1. Copy and paste the following into Terminal: `echo export PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH >> ~/.bash_profile`, and then hit Enter.
 2. Type `source ~/.bash_profile`
 3. Type `chia version`. This should return `1.1.2` (the latest version at the time of writing this)
 
