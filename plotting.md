@@ -76,7 +76,7 @@ Hitting `ENTER` will start the process of creating a single plot.
 
 ## Plotting in Parallel
 
-To maximize plotting, you will want to plot in parallel. Using Terminal to plot in parallel is as simple as opening a new window and entering the `chia plots create` command from above.
+To maximize plotting, you will want to plot in parallel. Using Terminal to plot in parallel is as simple as opening a new window and entering the `chia plots create` command from above. You may also open new Tabs, if you prefer a single window.
 
 ## Plotting Examples                   
 
